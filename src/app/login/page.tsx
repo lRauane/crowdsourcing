@@ -1,6 +1,7 @@
 import Card from "@/components/Card";
 import LoginSideBarImage from "./components/LoginSideBarImage";
 import Button from "@/components/Button";
+import TextInput from "@/components/TextInput";
 
 export default function Login() {
   return (
@@ -8,7 +9,18 @@ export default function Login() {
       <LoginSideBarImage />
       <div className="flex-1 flex items-center justify-center">
         <Card>
-          Text
+          <TextInput
+          placeholder="E-mail"
+          type="email"
+          iconLeft="uil:envelope-alt">
+
+          </TextInput>
+          <TextInput
+          placeholder="Senha"
+          type="password"
+          iconLeft="uil:key-skeleton-alt">
+
+          </TextInput>
           <Button
            className="rounded-md">
             Entrar
