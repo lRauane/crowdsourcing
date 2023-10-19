@@ -1,35 +1,66 @@
-import Button from "@/components/Button";
 import Card from "@/components/Card";
-import TextInput from "@/components/TextInput";
+import FirstStep from "./components/FirstStep";
+import React from "react";
+import SecondStep from "./components/SecondStep";
+import { Icon } from "@iconify/react/dist/iconify.js";
+import { LoginPageActionTypes } from "../../page";
 
-const RegisterForm = () => {
+export type RegisterFormState = {
+  step?: number;
+  email?: string;
+  password?: string;
+  confirmPassword?: string;
+  fullName?: string;
+  dateOfBirth?: string | Date;
+  cellPhone?: string;
+};
+
+type RegisterFormProps ={
+  handleSetAction: (action: LoginPageActionTypes) => void
+}
+
+const RegisterForm = ({handleSetAction}: RegisterFormProps) => {
+  const [state, setState] = React.useState<RegisterFormState>({
+    step: 0,
+    email: "",
+    password: "",
+    confirmPassword: "",
+    fullName: "",
+    dateOfBirth: "",
+    cellPhone: "",
+  });
+
+  const handleChangeState = (updatedValues: RegisterFormState) => {
+    setState((previousState) => ({
+      ...previousState,
+      ...updatedValues,
+    }));
+  };
+
+  const handleNextStep = () => {
+    handleChangeState({ step: state.step ? state.step++ : 1 });
+  };
+
+  const steps = [
+    <FirstStep
+      handleNextStep={handleNextStep}
+      key={0}
+      handleChangeState={handleChangeState}
+      state={state}
+    />,
+
+    <SecondStep state={state} handleChangeState={handleChangeState} key={1} />,
+  ];
+
   return (
     <Card className="border-[#121212]">
-      <>
-        <TextInput
-          label="E-mail"
-          type="email"
-          placeholder="E-mail"
-          iconLeft="uil:envelope-alt"
-        />
-        <TextInput
-          label="Senha"
-          labelClassNames="text-black"
-          placeholder="Senha"
-          type="password"
-          iconLeft="uil:key-skeleton-alt"
-        />
-        <TextInput
-          label="Confirmar senha"
-          labelClassNames="text-black"
-          placeholder="Confirmar senha"
-          type="password"
-          iconLeft="uil:key-skeleton-alt"
-        />
-        <div className="mt-[24px]">
-        <Button className="rounded-md w-[100%]">Próximo</Button>
-        </div>
-      </>
+      {steps[state.step ?? 0]}
+      <div className="mt-[26px]">
+        <span className="flex items-center gap-1 text-sub cursor-pointer" onClick={() => handleSetAction('login')}>
+          <Icon icon={"uil:user"} />
+          Login
+        </span>
+      </div>
     </Card>
   );
 };

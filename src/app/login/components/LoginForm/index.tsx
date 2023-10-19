@@ -4,8 +4,13 @@ import Button from "@/components/Button"
 import Card from "@/components/Card"
 import TextInput from "@/components/TextInput"
 import { Icon } from "@iconify/react/dist/iconify.js"
+import { LoginPageActionTypes } from "../../page"
 
-const LoginForm = () => {
+type LoginFormProps ={
+  handleSetAction: (action: LoginPageActionTypes) => void
+}
+
+const LoginForm = ({handleSetAction}: LoginFormProps) => {
   return (
   <Card className="border-[#121212]">
           <TextInput
@@ -42,7 +47,7 @@ const LoginForm = () => {
             </Button>
           </div>
           <div className="mt-[24px]">
-          <span className="cursor-pointer flex gap-2 items-center underline">
+          <span className="cursor-pointer flex gap-2 items-center underline" onClick={() => handleSetAction("register")}>
             <Icon icon="uil:plus-square"/>
             Quero criar uma conta
           </span>
