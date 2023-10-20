@@ -35,7 +35,7 @@ export default function Login() {
   }
 
   return (
-    <main className="flex h-screen">
+    <main className="flex h-screen-navbar">
       <LoginSideBarImage />
       <div className="flex-1 flex items-center justify-center">
         {actions[state.actionType].component}
