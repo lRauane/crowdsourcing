@@ -1,10 +1,10 @@
-import ActionCard from "./components/ActionCard";
-import ProblemCard from "./components/ProblemCard";
+import ActionCard from "../components/ActionCard"
 
-export default function Home() {
-  const problems: Problem[] = [
+
+export default function Solutions() {
+  const actions: Action[] = [
     {
-      imageUrl: 'https://jpeg.org/images/jpeg-home.jpg',
+      img: 'https://jpeg.org/images/jpeg-home.jpg',
       title: 'Action',
       description: 'Solution for a problem',
       author: 'Samuel Moreira',
@@ -13,34 +13,37 @@ export default function Home() {
         city: 'Maringa',
         neighborhood: 'Zona 02'
       },
-      deadline: "2023-10-23",
-      pix: "teste"
+      amountCollected: 150,
+      totalGoal: 1000,
+      finalDate: "2023-10-23"
     },
     {
-      imageUrl: 'https://jpeg.org/images/jpeg-home.jpg',
-      title: 'Action',
-      description: 'Solution for a problem',
+      img: 'https://jpeg.org/images/jpeg-home.jpg',
+      title: 'Action 2',
+      description: 'Solution for a problem 2',
       author: 'Samuel Moreira',
       address: {
         uf: 'PR',
         city: 'Maringa',
         neighborhood: 'Zona 02'
       },
-      deadline: "2023-10-23",
-      pix: "teste"
+      amountCollected: 150,
+      totalGoal: 1000,
+      finalDate: "2023-10-23"
     },
     {
-      imageUrl: 'https://jpeg.org/images/jpeg-home.jpg',
-      title: 'Action',
-      description: 'Solution for a problem',
+      img: 'https://jpeg.org/images/jpeg-home.jpg',
+      title: 'Action 2',
+      description: 'Solution for a problem 2',
       author: 'Samuel Moreira',
       address: {
         uf: 'PR',
         city: 'Maringa',
         neighborhood: 'Zona 02'
       },
-      deadline: "2023-10-23",
-      pix: "teste"
+      amountCollected: 150,
+      totalGoal: 1000,
+      finalDate: "2023-10-23"
     },
   ]
 
@@ -50,7 +53,7 @@ export default function Home() {
         <h1 className="text-[56px] text-black font-extrabold text-center">Escolha uma ação para apoiar</h1>
       </div>
       <div className="flex flex-wrap gap-8 w-full max-w-[1400px] justify-center py-4">
-        {problems.map((problem, i) => <ProblemCard problem={problem} key={i}/>)
+        {actions.map((action, i) => <ActionCard action={action} key={i}/>)
         }
       </div>
     </main>

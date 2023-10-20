@@ -32,10 +32,11 @@ const Select = ({
       <label>{subDescription}</label>
       <div className="flex items-center border border-sub rounded-lg bg-white">
         <select
+        {...props}
           id="votingTime"
           className={`"bg-white border text-gray-900 ${defaultSelectClasses}`}>
           {options.map((option, i) => (
-            <option key='' value={option.value}>{option.text}</option>
+            <option key={option.value} defaultValue="3" value={option.value}>{option.text}</option>
           ))}
         </select>
       </div>
