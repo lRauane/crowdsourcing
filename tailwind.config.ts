@@ -13,7 +13,8 @@ const config: Config = {
         '--black-color': 'var(--black-color)',
         secondary: 'var(--secondary-color)',
         'sub-30': 'var(--sub-30)',
-        sub: 'var(--sub)'
+        sub: 'var(--sub)',
+        'card-comment': 'var(--card-comment)'
       },
       backgroundImage: {
         'on-code': 'var(--on-code)',

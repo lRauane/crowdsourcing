@@ -11,7 +11,7 @@ const TextArea = ({label, labelClassNames, className, ...props}: TextAreaProps) 
   const defaultTextAreaClasses = 'flex-grow px-3 rounded-lg focus:border-none py-2 text-sm outline-0'
   const defaultLabelClasses = "block mb-2 text-sm font-bold text-gray-600";
 
-  const mergedLabelClasses = twMerge(defaultLabelClasses, labelClassNames);
+  const mergedLabelClasses = twMerge(defaultTextAreaClasses, labelClassNames);
   
 
   return(

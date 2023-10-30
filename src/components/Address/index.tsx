@@ -16,6 +16,6 @@ const Address = ({uf, city, neighborhood}: AddressProps) => {
       <span>{address}</span>
     </div>
   )
-}
+} 
 
 export default Address;

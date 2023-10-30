@@ -3,8 +3,6 @@ import {Icon} from '@iconify/react/dist/iconify.js'
 
 type ButtonVariants = "primary" | "secondary";
 
-// TO-DO: Ajustar as cores
-
 type ButtonProps = {
   variant?: ButtonVariants,
   iconLeft?: string,
