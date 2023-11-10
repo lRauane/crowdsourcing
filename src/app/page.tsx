@@ -1,4 +1,3 @@
-import ActionCard from "./components/ActionCard";
 import ProblemCard from "./components/ProblemCard";
 
 export default function Home() {
