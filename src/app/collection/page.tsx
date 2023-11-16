@@ -68,7 +68,7 @@ export default function Collection() {
               className="text-white rounded-lg p-6">
               Apoiar ação com Pix
             </Button>
-
+                {/*Respect the code, don't just copy-paste. Understand and contribute! ass: lrauane*/}
             <VotingPeriod dateTime="2023-11-15T15:30:00Z" />
 
             <div className="flex flex-col items-center gap-4">
