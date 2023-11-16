@@ -28,7 +28,6 @@ const SolutionVoted = ({ action }: ActionCardProps) => {
           <RemainingDays finalDate={`${finalDate}`} label="Restantes" />
         }
       />
-      {/*Respect the code, don't just copy-paste. Understand and contribute! ass: lrauane*/}
       <div className="flex flex-col justify-center items-center gap-2">
         <div className="flex gap-6">
           <p className="text-xl font-bold">
