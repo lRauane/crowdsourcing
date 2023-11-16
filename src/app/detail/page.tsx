@@ -4,10 +4,8 @@ import Image from "next/image";
 import problem from "../../assets/Rectangle 6.png";
 import Address from "@/components/Address";
 import CardSolution from "./components/CardSolution";
-import UserComment from "../components/UserComment";
 import CommentField from "../components/CommentField";
 import Footer from "@/components/Footer";
-import NavBar from "@/components/NavBar";
 import Title from "@/components/Title";
 import Discussion from "./components/Discussion";
 
