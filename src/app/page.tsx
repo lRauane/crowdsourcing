@@ -1,4 +1,3 @@
-import Title from "@/components/Title";
 import ProblemCard from "./components/ProblemCard";
 
 export default function Home() {
@@ -47,7 +46,7 @@ export default function Home() {
   return (
     <main className="flex flex-col items-center">
       <div className="mt-[56px]">
-        <Title content="Conheça os problemas em votação"/>
+        <h1 className="text-[56px] text-black font-extrabold text-center">Conheça os problemas em votação</h1>
       </div>
       <div className="flex flex-wrap gap-8 w-full max-w-[1400px] justify-center py-4">
         {problems.map((problem, i) => <ProblemCard problem={problem} key={i}/>)
