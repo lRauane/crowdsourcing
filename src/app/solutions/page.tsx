@@ -1,4 +1,3 @@
-import Title from "@/components/Title"
 import ActionCard from "../components/ActionCard"
 
 
@@ -51,7 +50,7 @@ export default function Solutions() {
   return (
     <main className="flex flex-col items-center">
       <div className="mt-[56px]">
-        <Title content="Escolha uma ação para apoiar"/>
+        <h1 className="text-[56px] text-black font-extrabold text-center">Escolha uma ação para apoiar</h1>
       </div>
       <div className="flex flex-wrap gap-8 w-full max-w-[1400px] justify-center py-4">
         {actions.map((action, i) => <ActionCard action={action} key={i}/>)
