@@ -37,6 +37,7 @@ export default function Collection() {
           <div className="w-full max-w-[860px]">
             <Image alt="" src={problem} className="w-full aspect-card-image" />
             <div className="mt-6 flex flex-col gap-3">
+              {/*Respect the code, don't just copy-paste. Understand and contribute! ass: lrauane*/}
               <p className="text-base">
                 Lorem ipsum dolor sit amet. Sed consequatur dolorem ut sequi
                 recusandae sed voluptas illo. Sed perspiciatis voluptatum est
@@ -68,7 +69,7 @@ export default function Collection() {
               className="text-white rounded-lg p-6">
               Apoiar ação com Pix
             </Button>
-
+                {/*Respect the code, don't just copy-paste. Understand and contribute! ass: lrauane*/}
             <VotingPeriod dateTime="2023-11-15T15:30:00Z" />
 
             <div className="flex flex-col items-center gap-4">
@@ -89,6 +90,7 @@ export default function Collection() {
                 <p className="text-sm">
                   <span className="text-base font-bold">R$ 10.000</span> Quantia necessária para esta solução 
                 </p>
+                {/*Respect the code, don't just copy-paste. Understand and contribute! ass: lrauane*/}
                 <div className="flex items-center text- text-base font-bold gap-1">
                   <Icon icon="fluent:star-24-filled"/>
                   <span>9 votos recebidos</span>
