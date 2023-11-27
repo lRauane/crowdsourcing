@@ -1,7 +1,7 @@
 import Button from "@/components/Button";
 
 type CardSolutionProps= {
-  cardSolution: CardSolution;
+  cardSolution: SolutionVoted;
 }
 
 const CardSolution= ({ cardSolution}: CardSolutionProps) => {
