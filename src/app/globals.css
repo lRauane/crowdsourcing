@@ -12,3 +12,10 @@
   --sub-30: rgba(121, 128, 139, 0.30);
   --card-comment: hsla(263, 100%, 57%, 0.1);
 }
+
+.voted{
+  background: var(--on-code);
+background-clip: text;
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+}

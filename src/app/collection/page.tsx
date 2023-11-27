@@ -6,7 +6,7 @@ import Footer from "@/components/Footer";
 import SolutionVoted from "./components/solution";
 import Button from "@/components/Button";
 import VotingPeriod from "@/components/VotingPeriod";
-import { Icon } from "@iconify/react/dist/iconify.js";
+import ActionVoted from "./components/ActionVoted";
 
 export default function Collection() {
   const actions: Action[] = [
@@ -23,6 +23,16 @@ export default function Collection() {
       amountCollected: 150,
       totalGoal: 1000,
       finalDate: "2023-10-23",
+    },
+  ];
+
+  const cardSolution: SolutionVoted[] = [
+    {
+      title: "Community Garden Project",
+      description:
+        "Implementing a community garden to promote sustainable living.",
+      amountRequired: 5000,
+      votes: 27,
     },
   ];
 
@@ -65,35 +75,16 @@ export default function Collection() {
             </div>
             <Button
               iconLeft="fluent:handshake-24-filled"
-              className="text-white rounded-lg p-6">
+              className="text-white rounded-lg p-6 w-[420px] h-[72px]">
               Apoiar ação com Pix
             </Button>
-                {/*Respect the code, don't just copy-paste. Understand and contribute! ass: lrauane*/}
+
             <VotingPeriod dateTime="2023-11-15T15:30:00Z" />
 
             <div className="flex flex-col items-center gap-4">
               <h3 className="text-2xl font-extrabold">Solução mais votada</h3>
-              <div className="flex flex-col gap-[10px] rounded-[10px] overflow-hidden shadow-md w-full max-w-[420px] min-w-[320px] py-8 px-6">
-                <h3 className="font-bold text-base">Título da solução</h3>
-                <p>
-                  Et fugiat laudantium et voluptates eius ea omnis fuga. Ea
-                  reiciendis expedita sit ducimus dolore hic ducimus galisum aut
-                  assumenda veritatis nam tempore iure est provident soluta ad
-                  repellat porro. Aut harum sequi cum consequatur dignissimos
-                  aut Quis quis aut minus recusandae aut ratione natus quo ipsam
-                  nesciunt. A quos minima et ipsam consequatur ut sint omnis ut
-                  eius praesentium non veritatis libero et possimus unde non
-                  quia animi.
-                </p>
-                <div className="flex flex-col justify-center items-center">
-                <p className="text-sm">
-                  <span className="text-base font-bold">R$ 10.000</span> Quantia necessária para esta solução 
-                </p>
-                <div className="flex items-center text- text-base font-bold gap-1">
-                  <Icon icon="fluent:star-24-filled"/>
-                  <span>9 votos recebidos</span>
-                </div>
-                </div>
+              <div className="flex flex-col gap-4 rounded-[10px] overflow-hidden w-full max-w-[420px] border border-[#79808b79] min-w-[320px] py-8 px-6">
+                {cardSolution.map((solution, i) => <ActionVoted actionVoted={solution} key={i}/>)}
               </div>
             </div>
           </div>

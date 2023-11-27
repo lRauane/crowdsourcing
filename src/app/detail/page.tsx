@@ -10,7 +10,7 @@ import Title from "@/components/Title";
 import Discussion from "./components/Discussion";
 
 const Detail = () => {
-  const detailCards = [
+  const detailCards: SolutionVoted[] = [
     {
       title: 'Título da Solução 1',
       description: " Non nesciunt aspernatur ab tempora quasi sit culpa eius rem error dignissimos. Est fuga alias non neque sapiente et sint nemo qui  Non nesciunt aspernatur ab tempora quasi sit culpa eius rem error dignissimos. Est fuga alias non neque sapiente et sint nemo qui ",
@@ -72,16 +72,8 @@ const Detail = () => {
             />
             {detailCards.map((detail, i) => (
               <CardSolution
+              cardSolution={detail}
               key={i}
-              title={detail.title}
-              description={detail.description}
-              amountRequired={detail.amountRequired}
-              votes={detail.votes}
-              voted={detail.voted}
-              onVoteClick={() =>{
-                
-              }
-              }
               />
             ))
             }

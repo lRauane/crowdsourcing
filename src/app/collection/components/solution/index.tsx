@@ -13,7 +13,7 @@ const SolutionVoted = ({ action }: ActionCardProps) => {
   const { author, amountCollected, totalGoal, finalDate } = action;
 
   return (
-    <div className="flex flex-col gap-8 rounded-[10px] overflow-hidden shadow-md w-full max-w-[420px] min-w-[320px] py-8 px-6">
+    <div className="flex flex-col gap-8 rounded-[10px] overflow-hidden border border-[#79808b79] w-full max-w-[420px] min-w-[320px] py-8 px-6">
       <div className="flex flex-col">
         <h1 className="text-6xl font-bold">
           R$ <span>{totalGoal}</span>
@@ -29,7 +29,7 @@ const SolutionVoted = ({ action }: ActionCardProps) => {
         }
       />
       <div className="flex flex-col justify-center items-center gap-2">
-        <div className="flex gap-6">
+        <div className="flex justify-center items-center gap-6">
           <p className="text-xl font-bold">
             Meta R$ <span>{totalGoal}</span>
           </p>

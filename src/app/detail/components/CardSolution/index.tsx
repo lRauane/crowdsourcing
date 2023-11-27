@@ -1,20 +1,11 @@
 import Button from "@/components/Button";
 
-type DetailProblemsCardProps = {
-  title: string;
-  description: string;
-  amountRequired: number;
-  votes: number;
-  voted: boolean;
-  onVoteClick: () => void;
-};
+type CardSolutionProps= {
+  cardSolution: CardSolution;
+}
 
-const CardSolution= ({ title,
-  description, 
-  amountRequired,
-  votes,
-  voted,
-  onVoteClick }: DetailProblemsCardProps) => {
+const CardSolution= ({ cardSolution}: CardSolutionProps) => {
+  const {title, description, amountRequired, votes, voted, onVoteClick} = cardSolution;
 
   return (
     <div className="w-full flex flex-col max-w-[860px] gap-4 bg-white p-[24px] pt-[32px] rounded-lg shadow-md border">
