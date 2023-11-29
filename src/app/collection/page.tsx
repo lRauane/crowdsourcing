@@ -3,7 +3,7 @@ import Title from "@/components/Title";
 import Image from "next/image";
 import problem from "../../assets/Rectangle 6.png";
 import Footer from "@/components/Footer";
-import SolutionVoted from "./components/solution";
+import SolutionVoted from "./components/SolutionVoted";
 import Button from "@/components/Button";
 import VotingPeriod from "@/components/VotingPeriod";
 import ActionVoted from "./components/ActionVoted";
